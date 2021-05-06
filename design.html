@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Willkommen in der Welt von Wortlaut und Bildsprache! Als Polygrafin und Texterin hilft Ihnen Yvette Bolliger bei Ihrer Unternehmenskommunikation.">
+  <title>yvette-bolliger.ch – Design</title>
+  <!-- Link zum CSS -->
+  <link rel="stylesheet" href="css/central.css" />
+  <!-- Link zu Fonts von Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <!-- Favicon einbinden -->
+  <link rel="shortcut icon" type="image/x-icon" href="/img/yb_favicon.ico" />
+</head>
+
+<body>
+  <!-- Logo und Home Button -->
+  <header>
+    <div class="logobox">
+      <a href="home.html" title="Home">
+        <img src="img/yb_home_button.svg" alt="Logo und Home-Button für yvette-bolliger.ch mit Emblem und Initialen YB">
+      </a>
+    </div>
+  </header>
+  <!-- Navigation Links -->
+  <div class="nav-wrapper mobil"><img src="img/yb_mobile_navigation.svg" alt="Mobil Navigation" width="40" height="40"></div>
+  <div class="nav-wrapper no-mobil">
+    <ul class="nav-right">
+      <li><a href="text.html">Text</a></li>
+      <li><a href="bild.html">Bild</a></li>
+      <li><a href="design.html">Design</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </div>
+  <!-- Bildbearbeitung Text und Hinweis auf externen Link -->
+  <div class="infotext">
+    <h1 id="typewriter"></h1>
+    <p>
+      Es gibt keine zweite Chance für den ersten Eindruck. Deshalb ist ein gepflegtes, stimmiges Corporate Design ganz wichtig für den Erfolg eines Unternehmens. Ihre langjährigen Kunden schätzen Sie bestimmt dank Ihrer Produktequalität,
+      aber potenzielle Neukunden orientieren sich vorerst an Ihrem optischen Auftritt. Mit einem professionellen Erscheinungsbild wird Ihre Firma zu einer unverkennbaren Marke mit besonderer Anziehungskraft. Selbstverständlich - die inneren Werte zählen -
+      und genau deshalb sollten diese doch auch würdig nach aussen getragen werden! Eine Auswahl an Kundenaufträgen...
+    </p>
+
+    <!-- Bildgalerie mit auto columns (Design-Referenzen) -->
+
+    <!-- auto colums -->
+    <div class="grid-container">
+      <div class="grid-item">
+        <div id="g01"><img src="img\jimmi-350-350px.gif" alt="transparent"></div>
+        <h2>Coiffure Kettenbrücke</h2>
+        <h3>Redesign</h3>
+      </div>
+
+      <div class="grid-item">
+        <div id="g02"><img src="img\jimmi-350-350px.gif" alt="transparent"></div>
+        <h2>Jardinsuisse</h2>
+        <h3>Flyerdesign</h3>
+      </div>
+
+      <div class="grid-item">
+        <div id="g03"><img src="img\jimmi-350-350px.gif" alt="transparent"></div>
+        <h2>Maler Briner AG</h2>
+        <h3>Corporate Design</h3>
+      </div>
+
+      <div class="grid-item">
+        <div id="g04"><img src="img\jimmi-350-350px.gif" alt="transparent"></div>
+        <h2>JUR Records</h2>
+        <h3>Corporate Design</h3>
+      </div>
+
+      <div class="grid-item">
+        <div id="g05"><img src="img\jimmi-350-350px.gif" alt="transparent"></div>
+        <h2>Sibylle Niffeler</h2>
+        <h3>Corporate Design</h3>
+      </div>
+
+      <div class="grid-item">
+        <div id="g06"><img src="img\jimmi-350-350px.gif" alt="transparent"></div>
+        <h2>Stadtmix Bar</h2>
+        <h3>Kartendesign</h3>
+      </div>
+
+      <div class="grid-item">
+        <div id="g07"><img src="img\jimmi-350-350px.gif" alt="transparent"></div>
+        <h2>Telli-Pfötli</h2>
+        <h3>Corporate Design</h3>
+      </div>
+
+      <div class="grid-item">
+        <div id="g08"><img src="img\jimmi-350-350px.gif" alt="transparent"></div>
+        <h2>Urban21</h2>
+        <h3>Editorial Design</h3>
+      </div>
+
+      <div class="grid-item">
+        <div id="g09"><img src="img\jimmi-350-350px.gif" alt="transparent"></div>
+        <h2>UH-Art</h2>
+        <h3>Redesign</h3>
+      </div>
+    </div>
+
+
+    <!-- Responsive Hintergrundbild -->
+    <img src="img/yb_background_image_large.jpg" id="bg-image" alt="Hintergrundbild mit offenem Buch und daraus springenden Lettern">
+  </div>
+  <!-- jQuery und Javascript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    let x = 0;
+    let textEffect = "Corporate Design und Layoutdesign ";
+    let container = document.getElementById("typewriter");
+
+    function animate() {
+      if (x < textEffect.length) {
+        container.innerHTML += textEffect.charAt(x);
+        x++;
+        setTimeout(animate, 55);
+      }
+    }
+    animate();
+  </script>
+
+</body>
+
+</html>

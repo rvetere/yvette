@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Willkommen in der Welt von Wortlaut und Bildsprache! Als Polygrafin und Texterin hilft Ihnen Yvette Bolliger bei Ihrer Unternehmenskommunikation.">
+  <title>yvette-bolliger.ch – Text</title>
+  <!-- Link zum CSS -->
+  <link rel="stylesheet" href="css/central.css" />
+  <!-- Link zu Fonts von Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <!-- Favicon einbinden -->
+  <link rel="shortcut icon" type="image/x-icon" href="/img/yb_favicon.ico" />
+</head>
+
+<body>
+  <!-- Logo und Home Button -->
+  <header>
+    <div class="logobox">
+      <a href="home.html" title="Home">
+        <img src="img/yb_home_button.svg" alt="Logo und Home-Button für yvette-bolliger.ch mit Emblem und Initialen YB">
+      </a>
+    </div>
+  </header>
+  <!-- Navigation Links -->
+  <div class="nav-wrapper mobil"><img src="img/yb_mobile_navigation.svg" alt="Mobil Navigation" width="40" height="40"></div>
+  <div class="nav-wrapper no-mobil">
+    <ul class="nav-right">
+      <li><a href="text.html">Text</a></li>
+      <li><a href="bild.html">Bild</a></li>
+      <li><a href="design.html">Design</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </div>
+  <!-- Bildbearbeitung Text und Hinweis auf externen Link -->
+  <div class="infotext">
+    <div class="erfassen">
+      <h1 id="typewriter"></h1>
+      <p>Texte müssen auf den ersten Blick fesseln – nach zweiten Chancen sucht man in der Welt des Geschriebenen vergeblich.
+        Gekonnt mit beeindruckenden Worthülsen um sich werfen ist Silber, relevante Inhaltspunkte erkennen und diese ansprechend verpacken ist Gold.
+        Ich helfe Ihnen dabei, Ihre Kernaussagen zu erfassen und zu einem übersichtlichen und lesefreundlichen Text zu bündeln, der Ihre Botschaft
+        an das gewünschte Zielpublikum bringt.
+      </p>
+    </div>
+    <div class="editieren">
+      <h1 id=typewriter2></h1>
+      <p>Sie verfügen bereits über einen Textentwurf, der zwar alle wichtigen Informationen beinhaltet, aber einfach noch nicht nach einer «runden Sache» klingt?
+        Oft sind es kleine Details, die den grossen Unterschied machen: Eine Vereinheitlichung des Schreibstils, die orthografische Überarbeitung oder schon
+        nur das Kürzen und Umstrukturieren Ihres Textes können diesen in einem ganz anderen Licht erscheinen lassen.
+      </p>
+    </div>
+    <!-- Bildgalerie mit auto columns (Design-Referenzen) -->
+
+
+    <!-- Responsive Hintergrundbild -->
+    <img src="img/yb_background_image_large.jpg" id="bg-image" alt="Hintergrundbild mit offenem Buch und daraus springenden Lettern">
+  </div>
+  <!-- jQuery und Javascript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    let x = 0;
+    let textEffect = "Erfassen neuer Texte";
+    let container = document.getElementById("typewriter");
+
+    function animate() {
+      if (x < textEffect.length) {
+        container.innerHTML += textEffect.charAt(x);
+        x++;
+        setTimeout(animate, 55);
+      }
+    }
+    animate();
+
+    setTimeout(function() {
+console.log("Callback Funktion wird aufgerufen");
+}, 3000);
+
+
+
+setTimeout(function() {
+  // Typewriter verzögert abspielen
+  let y = 0;
+      let textEffect2 = "Editieren und korrigieren bestehender Texte";
+      let container2 = document.getElementById("typewriter2");
+
+      function scndanimate() {
+        if (y < textEffect2.length) {
+          container2.innerHTML += textEffect2.charAt(y);
+          y++;
+          setTimeout(scndanimate, 55);
+        }
+      }
+      scndanimate();
+  // alert('lalalalla');
+}, 1900);
+
+  </script>
+
+
+</body>
+
+</html>

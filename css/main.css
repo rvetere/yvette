@@ -1,0 +1,414 @@
+/*
+Table of content:
+01: CSS Reset
+02: CSS Colours
+03: Body & Background Image
+04: Texts
+05: Navigation
+06: Grid
+07: Shadows
+08: Contact & Form
+
+*/
+/* === 01: tiny CSS Reset === */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* ==================================== */
+/* === 02: CSS Colours === */
+:root {
+  --cream: #e8e8e1;
+  --ivory: #dfdfd4;
+  --anthracite: #706f6f;
+  --petrol: #409a93;
+}
+
+/* ==================================== */
+/* === 03: Body, Bilder  === */
+body {
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+  background: var(--cream);
+  overflow-y: scroll;
+}
+
+/*body div:last-child {
+    margin-bottom: 6.25rem;
+}*/
+body {
+  margin-bottom: 5rem;
+}
+
+#bg-image {
+  display: none;
+}
+
+#bildbearbeitung {
+  width: 100%;
+  height: auto;
+  border-radius: 100%;
+  box-shadow: 7px 5px 5px rgba(112, 111, 111, 0.7);
+  max-width: 30.688rem;
+}
+
+#kontakt {
+  width: 80vw;
+  height: 80vw;
+  border-radius: 100%;
+  box-shadow: 7px 5px 5px rgba(112, 111, 111, 0.7);
+}
+
+#photopolisher {
+  /*width: 240px;*/
+  height: auto;
+  z-index: 999,
+}
+
+#photopolisher:hover {
+  /*box-shadow: 7px 5px 5px rgba(112, 111, 111, 0.7);*/
+}
+
+#danke {
+  opacity: 0.5;
+  background-blend-mode: multiply;
+}
+
+/* Firstload */
+#firstload {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  }
+
+  /* Firstload FadeIn
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+} */
+
+  .firstload-content {
+    z-index: 999;
+  }
+
+  img.firstload-bg {
+    width: 70vw;
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+
+  /* Hintergrund firstload mit bg-Fade? */
+.fadebackground {
+  background: var(--cream);
+  animation: fadebackground 6.5s;
+}
+
+  @keyframes fadebackground {
+    from {background-color: #d8d8cb}
+    to {background-color: var(--cream)}
+  }
+
+/* ==================================== */
+/* === 04: Texts === */
+h1,
+h2,
+h3 {
+  font-family: 'Bitter', 'PT Serif' serif;
+  color: var(--anthracite);
+}
+
+h1 {
+  font-family: 'Bitter', 'PT Serif', serif;
+  font-size: 1.438rem;
+  line-height: 2.188rem;
+  margin-bottom: 1rem;
+  z-index: 999;
+}
+
+h1::selection,
+h2::selection,
+h3::selection {
+  background-color: var(--petrol);
+  color: var(--cream);
+}
+
+p {
+  font-family: 'Raleway', 'Montserrat', sans-serif;
+  color: var(--anthracite);
+  font-size: 1rem;
+  line-height: 1.625rem;
+  padding-bottom: 4rem;
+  z-index: 999;
+}
+
+p::selection {
+  background-color: var(--petrol);
+  color: var(--cream);
+}
+
+p span a, #tryagain {
+  color: var(--petrol);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.infotext {
+  margin-top: 15rem;
+  margin-bottom: 3rem;
+}
+
+/* === 05: Navigation === */
+.logobox {
+  width: 3.75rem;
+  height: 3.75rem;
+  position: absolute;
+  top: 1.875rem;
+  left: 1.875rem;
+  border-radius: 100%;
+}
+
+.logobox:hover {
+  box-shadow: 3px 3px 5px #888;
+  /* transition: 1 0.5s ease-in; */
+}
+
+.nav-wrapper.mobil img {
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 100%;
+}
+
+/*Ausklappmenü Mobile Navigation*/
+#anibox {
+  position: absolute;
+  right: 6rem;
+  top: 2rem;
+  background: fuchsia;
+  display: none; /*test . erst mal wieder auskommentiert, noch nicht fertig!*/
+}
+
+ul.nav-right {
+  list-style: none;
+}
+
+ul.nav-right li a {
+  text-decoration: none;
+  color: var(--petrol);
+  font-family: 'Bitter', 'PT Serif', serif;
+  font-size: 1.875rem;
+}
+
+/*ul.nav-right {
+    writing-mode: sideways-lr;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}*/
+.no-mobil .nav-right li {
+  writing-mode: sideways-lr;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  height: 150px;
+  transition: height 2s ease-in-out 0.1s;
+}
+
+.no-mobil .nav-right li:nth-child(1):hover {
+  height: 95vh !important;
+}
+
+.no-mobil .nav-right li:nth-child(1) {
+  right: 280px;
+  top: 0px;
+  background: url(../img/nav_bg_box.gif) 0 bottom / 210px no-repeat, url(../img/nav_bg.gif) 30px top repeat;
+  /*animate*/
+  height: 150px;
+}
+
+.no-mobil .nav-right li:nth-child(2) {
+  right: 210px;
+  top: 0;
+  background: url(../img/nav_bg_box.gif) 0 bottom / 190px no-repeat, url(../img/nav_bg.gif) 30px top repeat;
+  /*animate*/
+  height: 215px;
+}
+
+.no-mobil .nav-right li:nth-child(3) {
+  right: 140px;
+  top: 0;
+  background: url(../img/nav_bg_box.gif) 0 bottom / 320px no-repeat, url(../img/nav_bg.gif) 30px top repeat;
+  /*animate*/
+  height: 290px;
+}
+
+.no-mobil .nav-right li:nth-child(4) {
+  right: 70px;
+  top: 0;
+  background: url(../img/nav_bg_box.gif) 0 bottom / 370px no-repeat, url(../img/nav_bg.gif) 30px top repeat;
+  /*animate*/
+  height: 360px;
+}
+
+/* === 06: Grid === */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 4rem;
+}
+
+.grid-item {
+  /*background: fuchsia;*/
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4.5rem;
+}
+
+.grid-item img {
+  width: calc(100% - 3px);
+  border-radius: 100%;
+  padding: 3px;
+  /*temp. bug fix für komische schwarze ränder */
+}
+
+
+ /* FADE IN??? */
+
+/* .grid-item img:hover {
+  animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+} */
+
+.grid-item h2, .grid-item h3, .grid-item p {
+  font-family: 'Raleway', 'Montserrat', sans-serif;
+  color: var(--anthracite);
+  padding: 0;
+  text-align: center;
+}
+
+.grid-item h2 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  padding-top: 1.25rem;
+  padding-bottom: 0.5rem;
+}
+
+.grid-item h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.875rem;
+  padding-bottom: 1rem;
+}
+
+.grid-item h2:hover, .grid-item h3:hover {
+  color:var(--petrol);
+}
+
+#g01 img {
+  background: url(../img/yb_design1_inactive_small.jpg) center / cover;
+}
+
+#g01 img:hover {
+  background: url(../img/yb_design1_small.jpg) center / cover;
+}
+
+#g02 img {
+  background: url(../img/yb_design2_inactive_small.jpg) center / cover;
+}
+
+#g02 img:hover {
+  background: url(../img/yb_design2_small.jpg) center / cover;
+}
+
+#g03 img {
+  background: url(../img/yb_design3_inactive_small.jpg) center / cover;
+}
+
+#g03 img:hover {
+  background: url(../img/yb_design3_small.jpg) center / cover;
+}
+
+#g04 img {
+  background: url(../img/yb_design4_inactive_small.jpg) center / cover;
+}
+
+#g04 img:hover {
+  background: url(../img/yb_design4_small.jpg) center / cover;
+}
+
+#g05 img {
+  background: url(../img/yb_design5_inactive_small.jpg) center / cover;
+}
+
+#g05 img:hover {
+  background: url(../img/yb_design5_small.jpg) center / cover;
+}
+
+#g06 img {
+  background: url(../img/yb_design6_inactive_small.jpg) center / cover;
+}
+
+#g06 img:hover {
+  background: url(../img/yb_design6_small.jpg) center / cover;
+}
+
+#g07 img {
+  background: url(../img/yb_design7_inactive_small.jpg) center / cover;
+}
+
+#g07 img:hover {
+  background: url(../img/yb_design7_small.jpg) center / cover;
+}
+
+#g08 img {
+  background: url(../img/yb_design8_inactive_small.jpg) center / cover;
+}
+
+#g08 img:hover {
+  background: url(../img/yb_design8_small.jpg) center / cover;
+}
+
+#g09 img {
+  background: url(../img/yb_design9_inactive_small.jpg) center / cover;
+}
+
+#g09 img:hover {
+  background: url(../img/yb_design9_small.jpg) center / cover;
+}
+
+/* === 07: Shadows === */
+.grid-item img, .nav-wrapper.mobil img {
+  box-shadow: 7px 5px 5px rgba(112, 111, 111, 0.7);
+}
+
+/* === 07: Contact & Form === */
+.kontaktbild img {
+  border-radius: 100%;
+  width: 90vw;
+  height: 90vw;
+}
+
+/* ==================================== */

@@ -1,0 +1,31 @@
+/* === Liste of used fonts & fallback font (Montserrat) === */
+
+@font-face {
+    font-family: "Bitter";
+    src: url('../fonts/Bitter-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Raleway Regular";
+    src: url('../fonts/Raleway-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Raleway Bold";
+    src: url('../fonts/Raleway-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Montserrat Regular";
+    src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Montserrat Bold";
+    src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "PT Serif";
+    src: url('../fonts/PTSerif-Bold.ttf') format('truetype');
+}

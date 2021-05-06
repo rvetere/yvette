@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Willkommen in der Welt von Wortlaut und Bildsprache! Als Polygrafin und Texterin hilft Ihnen Yvette Bolliger bei Ihrer Unternehmenskommunikation.">
+  <title>yvette-bolliger.ch – Bild</title>
+  <!-- Link zum CSS -->
+  <link rel="stylesheet" href="css/central.css" />
+  <!-- Link zu Fonts von Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <!-- Favicon einbinden -->
+  <link rel="shortcut icon" type="image/x-icon" href="/img/yb_favicon.ico" />
+</head>
+
+<body>
+  <!-- Logo und Home Button -->
+  <header>
+    <div class="logobox">
+      <a href="home.html" title="Home">
+        <img src="img/yb_home_button.svg" alt="Logo und Home-Button für yvette-bolliger.ch mit Emblem und Initialen YB">
+      </a>
+    </div>
+  </header>
+  <!-- Navigation Links -->
+  <div class="nav-wrapper mobil"><img src="img/yb_mobile_navigation.svg" alt="Mobil Navigation" width="40" height="40"></div>
+  <div class="nav-wrapper no-mobil">
+    <ul class="nav-right">
+      <li><a href="text.html">Text</a></li>
+      <li><a href="bild.html">Bild</a></li>
+      <li><a href="design.html">Design</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </div>
+  <!-- Bildbearbeitung Text und Hinweis auf externen Link -->
+  <div class="infotext">
+    <h1 id="typewriter"></h1>
+    <p>
+      Der erste Eindruck zählt, und dieser ist zumeist visuell. Bilder lösen innert Sekunden Emotionen aus, die darüber entscheiden, ob wir etwas als ansprechend empfinden oder nicht. Professionelle Fotografie ist die halbe Miete für hochwertige,
+      ästhetische Bilder – doch mit dem nötigen Know-how und Feingefühl lassen sich auch in unterschiedlicher Qualität angelieferte Bilder perfektionieren und vereinheitlichen.
+      Auf <span><a href="#">Photo Polisher</a></span> erfahren Sie mehr über meine Post Production Services.
+    </p>
+    <div id="photopolisher">
+      <a href="#" id="photopolisher" title="Photo Polisher">
+        <img src="img/yb_bildbearbeitung_small.jpg" id="bildbearbeitung" srcset="img/yb_bildbearbeitung_small.jpg 350w, img/yb_bildbearbeitung_medium.jpg 681w, img/yb_bildbearbeitung_large.jpg 700w"
+          alt="Bild mit Monitor und Grafiktablett für Fotoretusche" alt="Logo für Photo Polisher Bildbearbeitungs-Dienstleister">
+      </a>
+    </div>
+
+
+
+
+    <!-- Responsive Hintergrundbild -->
+    <img src="img/yb_background_image_large.jpg" id="bg-image" alt="Hintergrundbild mit offenem Buch und daraus springenden Lettern">
+  </div>
+  <!-- jQuery und Javascript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    let x = 0;
+    let textEffect = "Digitale Bildbearbeitung ";
+    let container = document.getElementById("typewriter");
+
+    function animate() {
+      if (x < textEffect.length) {
+        container.innerHTML += textEffect.charAt(x);
+        x++;
+        setTimeout(animate, 55);
+      }
+    }
+    animate();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+/* Media Queries */
+/*mobil < 688px*/
+@media (max-width: 43em) {
+  .no-mobil {
+    visibility: hidden;
+  }
+
+  .nav-wrapper.mobil {
+    position: absolute;
+    top: 1.875rem;
+    right: 1.875rem;
+  }
+
+  .logobox {
+    box-shadow: 3px 3px 5px #888;
+  }
+}
+
+/*tablet > 688px*/
+@media (min-width: 43em) {
+  body {
+    padding-left: 2.5rem;
+    padding-right: 16.438rem;
+    /*background: var(--cream) url(../img/yb_background_image_large.png) no-repeat center fixed;
+      background-size: 95%;
+      background-position: center 91px;*/
+  }
+
+  #anibox {
+    display: none;
+  }
+
+  #kontakt {
+    width: 43.75rem;
+    height: 43.75rem;
+  }
+
+  /*.responsive img[src*="img/yb_bildbearbeitung_small.jpg"] {*/
+  div.editieren {
+    margin-left: 30%;
+  }
+
+  .nav-wrapper.no-mobil {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .infotext {
+    margin-top: 17rem;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 4rem;
+  }
+
+  .grid-item {
+    padding: 0 0;
+  }
+
+  .mobil {
+    visibility: hidden;
+  }
+
+  .logobox {
+    width: 5.938rem;
+    height: 5.938rem;
+    top: 3.438rem;
+    left: 3.438rem;
+  }
+
+  #bg-image {
+    display: inherit;
+    width: 90vw;
+    height: 90vw;
+    border-radius: 100%;
+    z-index: -1;
+    position: fixed;
+    top: 5rem;
+    left: 17rem;
+  }
+
+  /* === 04: Texts === */
+  h1,
+  h2,
+  h3 {
+    font-family: 'Bitter', 'PT Serif', serif;
+    color: var(--anthracite);
+  }
+
+  h1 {
+    font-size: 2.188rem;
+    line-height: 3.125rem;
+    margin-bottom: 1rem;
+    z-index: 999;
+  }
+
+  h1::selection,
+  h2::selection,
+  h3::selection {
+    background-color: var(--petrol);
+    color: var(--cream);
+  }
+
+  p {
+    font-family: 'Raleway', 'Montserrat', sans-serif;
+    color: var(--anthracite);
+    font-size: 1rem;
+    line-height: 1.625rem;
+    max-width: 31.25rem;
+    z-index: 999;
+  }
+
+  p::selection {
+    background-color: var(--petrol);
+    color: var(--cream);
+  }
+
+  p span a {
+    color: var(--petrol);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .infotext {
+    margin-top: 17rem;
+  }
+}
+
+/*desktop > 992px*/
+@media (min-width: 62em) {
+  body {
+    padding-left: 3.438rem;
+    padding-right: 21.25rem;
+    /*background: var(--cream) url(../img/yb_background_image_large.png) no-repeat center fixed;
+      background-size: 95%;
+      background-position: center 91px;*/
+  }
+
+  .logobox {
+    width: 7.7rem;
+    height: 7.7rem;
+    top: 3.438rem;
+    left: 3.438rem;
+  }
+
+  h1 {
+    font-size: 3.125rem;
+    line-height: 4.375rem;
+    margin-bottom: 1rem;
+    z-index: 999;
+  }
+
+  p {
+    font-family: 'Raleway', 'Montserrat', sans-serif;
+    color: var(--anthracite);
+    font-size: 1.25rem;
+    line-height: 2.063rem;
+    max-width: 48rem;
+    z-index: 999;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 4rem;
+  }
+}
+
+#g01 img {
+  background: url(../img/yb_design1_inactive_large.jpg) center / cover;
+}
+
+#g01 img:hover {
+  background: url(../img/yb_design1_large.jpg) center / cover;
+}
+
+#g02 img {
+  background: url(../img/yb_design2_inactive_large.jpg) center / cover;
+}
+
+#g02 img:hover {
+  background: url(../img/yb_design2_large.jpg) center / cover;
+}
+
+#g03 img {
+  background: url(../img/yb_design3_inactive_large.jpg) center / cover;
+}
+
+#g03 img:hover {
+  background: url(../img/yb_design3_large.jpg) center / cover;
+}
+
+#g04 img {
+  background: url(../img/yb_design4_inactive_large.jpg) center / cover;
+}
+
+#g04 img:hover {
+  background: url(../img/yb_design4_large.jpg) center / cover;
+}
+
+#g05 img {
+  background: url(../img/yb_design5_inactive_large.jpg) center / cover;
+}
+
+#g05 img:hover {
+  background: url(../img/yb_design5_large.jpg) center / cover;
+}
+
+#g06 img {
+  background: url(../img/yb_design6_inactive_large.jpg) center / cover;
+}
+
+#g06 img:hover {
+  background: url(../img/yb_design6_large.jpg) center / cover;
+}
+
+#g07 img {
+  background: url(../img/yb_design7_inactive_large.jpg) center / cover;
+}
+
+#g07 img:hover {
+  background: url(../img/yb_design7_large.jpg) center / cover;
+}
+
+#g08 img {
+  background: url(../img/yb_design8_inactive_large.jpg) center / cover;
+}
+
+#g08 img:hover {
+  background: url(../img/yb_design8_large.jpg) center / cover;
+}
+
+#g09 img {
+  background: url(../img/yb_design9_inactive_large.jpg) center / cover;
+}
+
+#g09 img:hover {
+  background: url(../img/yb_design9_large.jpg) center / cover;
+}

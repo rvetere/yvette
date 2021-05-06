@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Willkommen in der Welt von Wortlaut und Bildsprache! Als Polygrafin und Texterin hilft Ihnen Yvette Bolliger bei Ihrer Unternehmenskommunikation.">
+  <title>yvette-bolliger.ch – Kontakt</title>
+  <!-- Link zum CSS -->
+  <link rel="stylesheet" href="css/central.css" />
+  <link rel="stylesheet" href="css/form.css" />
+  <!-- Link zu Fonts von Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <!-- Favicon einbinden -->
+  <link rel="shortcut icon" type="image/x-icon" href="/img/yb_favicon.ico" />
+</head>
+
+<body>
+  <!-- Logo und Home Button -->
+  <header>
+    <div class="logobox">
+      <a href="home.html" title="Home">
+        <img src="img/yb_home_button.svg" alt="Logo und Home-Button für yvette-bolliger.ch mit Emblem und Initialen YB">
+      </a>
+    </div>
+  </header>
+  <!-- Navigation Links -->
+  <div class="nav-wrapper mobil"><img src="img/yb_mobile_navigation.svg" alt="Mobil Navigation" width="40" height="40"></div>
+  <div class="nav-wrapper no-mobil">
+    <ul class="nav-right">
+      <li><a href="text.html">Text</a></li>
+      <li><a href="bild.html">Bild</a></li>
+      <li><a href="design.html">Design</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </div>
+  <!-- Text und Portrait Kontakt -->
+  <div class="infotext">
+    <h1 id="typewriter"></h1>
+    <p>Hinter dem Namen Yvette Bolliger verbirgt sich eine gelernte Polygrafin mit einem Flair für Wort und Bild. Ich lese für mein Leben gerne differenziert
+      formulierte Bücher und kann mich an ästhetischen und ausdrucksstarken Bildern kaum sattsehen. Es ist naheliegend, dass mich die Herausforderung reizt,
+      diese beiden Komponenten miteinander zu verbinden und in Einklang zu bringen. Dank meiner mehrjährigen Praxiserfahrung als Lithografin und Korrektorin
+      verfüge ich über ein geschultes Auge in der Bild- und Textbearbeitung und möchte meine Dienstleistungen nicht auf einen dieser Themenbereiche beschränken,
+      sondern mich weiterhin an der Vielfältigkeit Ihrer Aufträge erfreuen. Nehmen Sie über e-Mail oder das untenstehende Formular Kontakt mit mir auf,
+      wenn Sie an einer Zusammenarbeit interessiert sind.
+    </p>
+
+    <div class="align-right"><img src="img/yb_kontakt_large.jpg" id="kontakt" alt="Portrait Yvette Bolliger bei der Arbeit am Computer mit Grafiktablet"></div>
+
+    <!-- Kontaktformular -->
+    <div id="container">
+      <div class="sign_wrapper">
+        <img class="sign" src="img/yb_logo_handwriting.svg" alt="Logo Schriftzug Yvette Bolliger Name in Handschrift">
+      </div>
+      <h2>Und nun zu Ihnen.<br>
+        Füllen Sie bitte die folgenden Felder aus:</h2>
+      <form action="form/emailer.php" method="post" id="contact_form">
+        <div class="firstname">
+          <label for="firstname"></label>
+          <input type="text" placeholder="Vorname" name="firstname" id="firstname_input" required>
+        </div>
+        <div class="lastname">
+          <label for="lastname"></label>
+          <input type="text" placeholder="Nachname" name="lastname" id="lastname_input" required>
+        </div>
+        <div class="email">
+          <label for="email"></label>
+          <input type="email" placeholder="E-mail Adresse" name="email" id="email_input" required>
+        </div>
+        <div class="phone">
+          <label for="name"></label>
+          <input type="text" placeholder="Telefonnummer" name="phone" id="phone_input" required>
+        </div>
+        <div class="subject">
+          <label for="subject"></label>
+          <select placeholder="Auftrag" name="subject" id="subject_input" required>
+            <option disabled hidden selected>AUFTRAG</option>
+            <option>Text</option>
+            <option>Bild (Photo Polisher)</option>
+            <option>Grafik</option>
+          </select>
+        </div>
+        <div class="message">
+          <label for="message"></label>
+          <textarea name="message" placeholder="Notizen zu meinem Auftrag" id="message_input" cols="30" rows="5" required></textarea>
+        </div>
+        <div class="submit">
+          <input type="submit" value="Senden" id="form_button">
+        </div>
+      </form><!-- // End form -->
+    </div><!-- // End #container -->
+
+    <!-- Responsive Hintergrundbild -->
+    <img src="img/yb_background_image_large.jpg" id="bg-image" alt="Hintergrundbild mit offenem Buch und daraus springenden Lettern">
+  </div>
+
+
+
+  <!-- jQuery und Javascript -->
+  <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+  <script>
+    let x = 0;
+    let textEffect = "Über mich – für Sie";
+    let container = document.getElementById("typewriter");
+
+    function animate() {
+      if (x < textEffect.length) {
+        container.innerHTML += textEffect.charAt(x);
+        x++;
+        setTimeout(animate, 55);
+      }
+    }
+    animate();
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+    /* General look */
+    @font-face {
+      font-family: "Bitter";
+      src: url('fonts/Bitter-Bold.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: "Raleway";
+      src: url('fonts/Raleway-Regular.ttf') format('truetype');
+    }
+
+    :root {
+      --cream: #e8e8e1;
+      --ivory: #dfdfd4;
+      --anthracite: #706f6f;
+      --petrol: #409a93;
+    }
+
+    html {
+      font-family: 'Raleway', 'Montserrat', sans-serif;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    #container {
+      background-color: var(--ivory);
+      max-width: 768px;
+      margin: 60px auto;
+      padding-top: 5rem;
+      position: relative;
+      box-shadow: 0 10px 20px rgba(112, 111, 111, 0.50), 0 6px 6px rgba(112, 111, 111, 0.30);
+      z-index: 999;
+    }
+
+    #container {
+      margin: -40px auto 20px auto;
+      width: 95%;
+      transform: rotate(358deg);
+    }
+
+    form {
+      padding: 37.5px;
+      margin: 50px 0;
+    }
+
+    h2 {
+      color: var(--anthracite);
+      font-family: 'Bitter', 'PT Serif', serif;
+      text-align: center;
+      font-size: 22px;
+      line-height: 35px;
+    }
+
+    /* SVG styling....? */
+    .sign_wrapper {
+      position: relative;
+      margin: 0 6em 0 8em;
+      /*max-width: 25%;*/
+    }
+
+    img {
+      /*width: fit-content;*/
+    }
+
+    /* Styling of input fields */
+    button {
+      overflow: visible;
+    }
+
+    button, select {
+      text-transform: none;
+    }
+
+    button, input, select, textarea {
+      color: var(--anthracite);
+      font: inherit;
+      margin: 0;
+    }
+
+    input {
+      line-height: normal;
+    }
+
+    textarea {
+      overflow: auto;
+    }
+
+    input[type='text'], [type='email'], select, textarea {
+      background: none;
+      border: none;
+      border-bottom: solid 2px var(--anthracite);
+      color: var(--anthracite);
+      font-size: 1.000em;
+      font-weight: 400;
+      margin: 0em 0 1.875em 0;
+      padding: 0 0 0.875em 0;
+      text-transform: none;
+      width: 100%;
+      box-sizing: border-box;
+      transition: all 0.3s;
+    }
+
+    input[type='text']:focus, [type='email']:focus, textarea:focus {
+      outline: none;
+      padding: 0 0 0.875em 0;
+    }
+
+    .message {
+      float: none;
+    }
+
+    .firstname {
+      float: left;
+      width: 45%;
+    }
+
+    .lastname {
+      float: right;
+      width: 45%;
+    }
+
+    select {
+      outline: none;
+      color: var(--petrol);
+    }
+
+    select::-ms-expand {
+      display: none;
+    }
+
+    .subject, .phone, .email {
+      width: 100%;
+    }
+
+    textarea {
+      line-height: 150%;
+      height: 150px;
+      resize: none;
+      width: 100%;
+    }
+
+    ::-webkit-input-placeholder {
+      color: var(--petrol);
+      text-transform: uppercase;
+    }
+
+    :-moz-placeholder {
+      color: var(--petrol);
+      text-transform: uppercase;
+      opacity: 1;
+    }
+
+    ::-moz-placeholder {
+      color: var(--petrol);
+      text-transform: uppercase;
+      opacity: 1;
+    }
+
+    :-ms-input-placeholder {
+      color: var(--petrol);
+      text-transform: uppercase;
+    }
+
+    #form_button {
+      background: none;
+      border: solid 2px var(--anthracite);
+      color: var(--anthracite);
+      cursor: pointer;
+      display: inline-block;
+      font-family: 'Raleway', 'Montserrat', sans-serif;
+      font-size: 0.875em;
+      font-weight: bold;
+      outline: none;
+      padding: 20px 35px;
+      text-transform: uppercase;
+      transition: all 0.3s;
+    }
+
+    #form_button:hover {
+      background: var(--petrol);
+      border: solid 2px var(--petrol);
+      color: var(--ivory);
+    }
+
+    /* Media Queries */
+    @media screen and (max-width: 1100px) {
+      #container {
+        margin: -40px auto 20px auto;
+        width: 95%;
+        transform: rotate(358deg);
+      }
+    }
+
+    @media screen and (max-width: 834px) {
+      h2 {
+        font-size: 20px;
+      }
+
+      #form_button {
+        padding: 15px 25px;
+      }
+    }
+
+    @media screen and (max-width: 414px) {
+      h2 {
+        font-family: 'Bitter', 'PT Serif', serif;
+        font-size: 16px;
+      }
+
+      .sign_wrapper {
+        margin: 0 1em 0 1em;
+      }
+
+      input[type='text'], [type='email'], select, textarea {
+        font-size: 0.875em;
+      }
+    }

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Willkommen in der Welt von Wortlaut und Bildsprache! Als Polygrafin und Texterin hilft Ihnen Yvette Bolliger bei Ihrer Unternehmenskommunikation.">
+  <title>yvette-bolliger.ch – Homepage</title>
+  <!-- Link zum CSS -->
+  <link rel="stylesheet" href="css/central.css" />
+  <!-- Link zu Fonts von Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <!-- Favicon einbinden -->
+  <link rel="shortcut icon" type="image/x-icon" href="img/yb_favicon.ico" />
+
+</head>
+
+<body id="home">
+
+  <!-- Logo und Home Button -->
+  <header>
+    <div class="logobox">
+      <a href="/" title="Home">
+        <img src="img/yb_home_button.svg" alt="Logo und Home-Button für yvette-bolliger.ch mit Emblem und Initialen YB">
+      </a>
+    </div>
+  </header>
+  <!-- Navigation Links -->
+  <div class="nav-wrapper mobil"><img src="img/yb_mobile_navigation.svg" alt="Mobil Navigation" width="40" height="40"></div>
+  <div id="anibox">
+    <ul class="mobilnavi">
+      <li><a href="text.html">Text</a></li>
+      <li><a href="bild.html">Bild</a></li>
+      <li><a href="design.html">Design</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </div>
+  <div class="nav-wrapper no-mobil">
+    <ul class="nav-right">
+      <li><a href="text.html">Text</a></li>
+      <li><a href="bild.html">Bild</a></li>
+      <li><a href="design.html">Design</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </div>
+  <!-- <div class="nav-wrapper-mobil">
+      <ul class="nav-right">
+        <li><a href="text.html">Text</a></li>
+        <li><a href="bild.html">Bild</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+  </div>-->
+  <!-- Einleitungstext und Angebotsübersicht -->
+  <div class="infotext">
+    <h1 id="typewriter"></h1>
+    <p>
+      Der Grundstein für eine stimmige Unternehmenskommunikation ist die (Bild)Sprache Ihres Unternehmens. Die Kunst, Bilder im passenden Farbton und Texte im passenden Tonfall umzusetzen.
+      Denn im ungünstigen Licht sagen Bilder manchmal doch nicht mehr als tausend Worte. Und unbedacht aneinandergereiht, erinnern Buchstaben manchmal doch eher an eine köstliche Suppenbeilage…
+      Lassen Sie uns gemeinsam herausfinden, in welcher Sprache die Botschaft Ihres Unternehmens am treffendsten wiedergegeben wird!
+    </p>
+    <!-- Responsive Hintergrundbild -->
+    <img src="img/yb_background_image_large.jpg" id="bg-image" alt="Hintergrundbild mit offenem Buch und daraus springenden Lettern">
+  </div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    let x = 0;
+    let textEffect = "Willkommen in der Welt von Wortlaut und Bildsprache. ";
+    let container = document.getElementById("typewriter");
+
+    function animate() {
+      if (x < textEffect.length) {
+        container.innerHTML += textEffect.charAt(x);
+        x++;
+        setTimeout(animate, 55);
+      }
+    }
+    animate();
+  </script>
+
+</body>
+
+</html>
